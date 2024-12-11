@@ -9,11 +9,13 @@ function createGrid(size) {
         square.style.width = `${squareSize}px`;
         square.style.height = `${squareSize}px`;
         container.appendChild(square);
+        currentSize = size;
     }
 
 }
 
 const DEFAULT_SIZE = 16;
+let currentSize = DEFAULT_SIZE;
 createGrid(DEFAULT_SIZE);
 let isMouseDown = false;
 
@@ -46,5 +48,13 @@ resetButton.addEventListener("click", function(){
     container.innerHTML = "";
     let inputNum = parseInt(userInput);
     createGrid(inputNum);
+
+});
+
+// clear the grid
+const clearButton = document.querySelector("#clear");
+clearButton.addEventListener("click", function() {
+    container.innerHTML = "";
+    createGrid(currentSize);
 
 });
