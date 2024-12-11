@@ -1,15 +1,17 @@
 .grid-square {
-   
+    box-sizing: border-box;
     border: 1px solid #166488;  /* 1px solid border for each square */
     background-color: lightgray;  /* Background color to help see each square */
-    width: 50px;  /* Width of each square */
-    height: 50px;  /* Height of each square */
+  
 }
 
 #container {
     display: flex;
     flex-wrap: wrap;
     background-color: #8c9ba5;
+    width: 800px; /* Fixed width */
+    height: 800px; /* Fixed height */
+    justify-content: flex-start;
 
 }
 
